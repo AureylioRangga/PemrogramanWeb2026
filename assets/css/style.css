@@ -1,0 +1,174 @@
+/* ===== 1. Reset & Base ===== */
+* {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #2b2b2b;
+  background-color: #f5f6f8;
+  line-height: 1.5;
+}
+
+/* Latihan tambahan # 1 */
+a {
+  color: #2e7d5b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 2. Header & Navbar (Flexbox) ===== */
+header {
+  display: flex;             
+  align-items: center;     
+  justify-content: space-between;
+  flex-wrap: wrap;           
+  background-color: #2e7d5b;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;   
+  gap: 1.25rem;     
+}
+
+header nav a {
+  color: #fff;
+}
+
+/* ===== 3. Layout & Kartu Putih ===== */
+main {
+  max-width: 900px;
+  margin: 2rem auto; 
+  padding: 0 1rem;
+}
+
+main section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main section h2 {
+  color: #2e7d5b;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== 4. Kartu Statistik (CSS Grid) ===== */
+
+/* Latihan tambahan #2: */
+main section:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+main section:nth-of-type(2) article {
+  background-color: #eef4fa;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+main section:nth-of-type(2) article h3 {
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 400;
+}
+
+main section:nth-of-type(2) article p {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2e7d5b;
+}
+
+/* ===== 5. Tabel (zebra stripes & hover) ===== */
+table {
+  width: 100%;
+  border-collapse: collapse; 
+}
+
+thead {
+  background-color: #2e7d5b;
+  color: #fff;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7f9fb; 
+}
+
+tbody tr:hover {
+  background-color: #eef4fa; 
+}
+
+/* Gaya dasar semua tombol aksi di tabel */
+tbody button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+/* Latihan tambahan #3 */
+tbody button:first-of-type {
+  background-color: #e08e2d; /* Edit: oranye */
+  color: #fff;
+}
+
+tbody button:last-of-type {
+  background-color: #c0392b; /* Hapus: merah */
+  color: #fff;
+}
+
+/* ===== 6. Form ===== */
+form label {
+  display: block;      
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+form input, form select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.45rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2e7d5b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===== 7. Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.25rem;
+  color: #777;
+  font-size: 0.85rem;
+}
