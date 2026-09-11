@@ -1,6 +1,6 @@
 /* ===== 1. Reset & Base ===== */
 * {
-  box-sizing: border-box; 
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-/* Latihan tambahan # 1 */
+/* Latihan tambahan #1 */
 a {
   color: #2e7d5b;
   text-decoration: none;
@@ -24,10 +24,10 @@ a:hover {
 
 /* ===== 2. Header & Navbar (Flexbox) ===== */
 header {
-  display: flex;             
-  align-items: center;     
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;           
+  flex-wrap: wrap;
   background-color: #2e7d5b;
   color: #fff;
   padding: 1rem 1.5rem;
@@ -39,18 +39,30 @@ header h1 {
 
 header nav ul {
   list-style: none;
-  display: flex;   
-  gap: 1.25rem;     
+  display: flex;
+  gap: 1.25rem;
 }
 
 header nav a {
   color: #fff;
 }
 
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
 /* ===== 3. Layout & Kartu Putih ===== */
 main {
   max-width: 900px;
-  margin: 2rem auto; 
+  margin: 2rem auto;
   padding: 0 1rem;
 }
 
@@ -68,8 +80,6 @@ main section h2 {
 }
 
 /* ===== 4. Kartu Statistik (CSS Grid) ===== */
-
-/* Latihan tambahan #2: */
 main section:nth-of-type(2) {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -98,7 +108,7 @@ main section:nth-of-type(2) article p {
 /* ===== 5. Tabel (zebra stripes & hover) ===== */
 table {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
 }
 
 thead {
@@ -112,14 +122,13 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f7f9fb; 
+  background-color: #f7f9fb;
 }
 
 tbody tr:hover {
-  background-color: #eef4fa; 
+  background-color: #eef4fa;
 }
 
-/* Gaya dasar semua tombol aksi di tabel */
 tbody button {
   padding: 0.3rem 0.6rem;
   border: none;
@@ -128,20 +137,24 @@ tbody button {
   cursor: pointer;
 }
 
-/* Latihan tambahan #3 */
 tbody button:first-of-type {
-  background-color: #e08e2d; /* Edit: oranye */
+  background-color: #e08e2d;
   color: #fff;
 }
 
 tbody button:last-of-type {
-  background-color: #c0392b; /* Hapus: merah */
+  background-color: #c0392b;
   color: #fff;
+}
+
+
+.table-responsive {
+  overflow-x: auto;
 }
 
 /* ===== 6. Form ===== */
 form label {
-  display: block;      
+  display: block;
   font-weight: 600;
   margin-top: 1rem;
 }
@@ -172,3 +185,44 @@ footer {
   color: #777;
   font-size: 0.85rem;
 }
+
+/* ===== Breakpoint Tablet (lebar layar <= 768px) ===== */
+@media (max-width: 768px) {
+  main section:nth-of-type(2) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Breakpoint Mobile (lebar layar <= 480px) ===== */
+@media (max-width: 480px) {
+  header {
+    position: relative;
+  }
+
+  .nav-toggle-label {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    order: 3;
+  }
+
+  .nav-toggle:checked ~ nav {
+    display: block;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  main section:nth-of-type(2) {
+    grid-template-columns: 1fr;
+  }
+
+  form input, form select {
+    max-width: 100%;
+  }
+}
+
