@@ -82,7 +82,7 @@ main section h2 {
 /* ===== 4. Kartu Statistik (CSS Grid) ===== */
 main section:nth-of-type(2) {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
