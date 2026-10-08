@@ -28,8 +28,14 @@ try {
         'nama' => $nama, 'no_anggota' => $no_anggota,
         'alamat' => $alamat, 'no_hp' => $no_hp, 'email' => $email,
     ]);
+
 } catch (PDOException $e) {
-    $_SESSION['flash'] = ['type' => 'error', 'pesan' => 'Gagal menyimpan: No. Anggota sudah terdaftar.'];
+    if ($e->getCode() === '23505') {
+        $pesan = 'No. Anggota sudah terdaftar, gunakan nomor lain.';
+    } else {
+        $pesan = 'Terjadi kesalahan saat menyimpan data.';
+    }
+    $_SESSION['flash'] = ['type' => 'error', 'pesan' => $pesan];
     header('Location: tambah.php');
     exit;
 }

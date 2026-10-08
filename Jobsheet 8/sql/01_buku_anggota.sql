@@ -16,3 +16,4 @@ CREATE TABLE IF NOT EXISTS anggota (
     no_hp VARCHAR(30),
     email VARCHAR(255)
 );
+
