@@ -1,0 +1,5 @@
+[
+    { "judul": "Laskar Pelangi", "pengarang": "Andrea Hirata", "tahun": 2005, "isbn": "978-979-3062-79-2", "stok": 5, "kategori": "fiksi" },
+    { "judul": "Bumi Manusia", "pengarang": "Pramoedya Ananta Toer", "tahun": 1980, "isbn": "978-602-03-3178-6", "stok": 3, "kategori": "fiksi" },
+    { "judul": "Filosofi Teras", "pengarang": "Henry Manampiring", "tahun": 2018, "isbn": "978-602-06-2328-5", "stok": 7, "kategori": "non-fiksi" }
+]
